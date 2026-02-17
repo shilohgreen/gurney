@@ -21,7 +21,7 @@ GEMINI_API_KEY=your-key-here
 ## Usage
 
 ```bash
-python3 gurney.py --prompt "Find the pricing plans"
+python3 gurney.py --prompt "Log in this website"
 ```
 
 By default it navigates to **https://learnpf.ai** using **Gemini 2.0 Flash**.
@@ -41,3 +41,7 @@ The agent has two interaction primitives:
 - **fill** — target by `role`/`name`, `label`, or `placeholder`
 
 Plus **answer** to return a final result. 3-second delay between every interaction.
+
+### Screenshots
+
+A full-page screenshot is automatically saved to `screenshots/` before the browser exits. Useful for debugging what the agent last saw.

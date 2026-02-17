@@ -17,14 +17,6 @@ DEFAULT_URL = "https://learnpf.ai"
 LEARNPF_USERNAME = os.getenv("LEARNPF_USERNAME")
 LEARNPF_PASSWORD = os.getenv("LEARNPF_PASSWORD")
 
-print(LEARNPF_USERNAME)
-print(LEARNPF_PASSWORD)
-
-if not LEARNPF_USERNAME:
-    print("⚠️  LEARNPF_USERNAME not set in .env")
-if not LEARNPF_PASSWORD:
-    print("⚠️  LEARNPF_PASSWORD not set in .env")
-
 # ── Constants ────────────────────────────────────────────────────────────────
 
 MAX_SNAPSHOT_CHARS = 48_000

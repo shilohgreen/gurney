@@ -51,7 +51,18 @@ def _check_env():
 def create_app() -> AsyncApp:
     """Build and configure the Bolt AsyncApp."""
     app = AsyncApp(token=SLACK_BOT_TOKEN)
+    
+    # ── Debug: Log ALL incoming events ──────────────────────────────────────────
+    @app.middleware
+    async def log_all_events(body, next, logger):
+        """Log all incoming events for debugging."""
+        event_type = body.get("type") or body.get("event", {}).get("type", "unknown")
+        logger.info(f"[ 🔍 log_all_events ] Incoming event: type={event_type}")
+        logger.info(f"[ 🔍 log_all_events ] Full body: {body}")
+        await next()
+    
     register_handlers(app)
+    logger.info("[ ✅ create_app ] App created and handlers registered")
     return app
 
 

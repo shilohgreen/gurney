@@ -1,6 +1,6 @@
 # GURNEY
 
-Gurney is a web-browsing agent that uses an OpenAI-compatible LLM
+Gurney is a lightweight web-browsing agent that uses an OpenAI-compatible LLM
 to interact with websites based on a natural-language prompt.
 
 Uses Playwright's accessibility snapshot and
